@@ -15,7 +15,8 @@ string timeConversion(string s){
         string b = to_string(a);
         sub = "0" + b;
         s.replace(0, 2, sub);
-        return s;
+        sub = s.substr(0, 8);
+        return sub;
     }
     else if (s[8] == 'P'){
         if (a<12){
@@ -24,8 +25,8 @@ string timeConversion(string s){
         string b = to_string(a);
         sub = b;
         s.replace(0, 2, sub);
-        cout << s << endl;
-        return s;
+        sub = s.substr(0, 8);
+        return sub;
     }
     else{
         return s;
